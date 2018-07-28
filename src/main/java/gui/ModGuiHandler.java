@@ -18,8 +18,9 @@ public class ModGuiHandler implements IGuiHandler {
         switch (ID) {
             case bottomlesspit_id:
                 return new ContainerBottomlessPit(player.inventory, (TileEntityBottomlessPit) world.getTileEntity(new BlockPos(x, y, z)));
+            default:
+                return null;
         }
-        return null;
     }
 
     @Nullable
@@ -28,7 +29,8 @@ public class ModGuiHandler implements IGuiHandler {
         switch (ID) {
             case bottomlesspit_id:
                 return new GuiBottomlessPit((ContainerBottomlessPit) getServerGuiElement(ID, player, world, x, y, z));
+            default:
+                return null;
         }
-        return null;
     }
 }
