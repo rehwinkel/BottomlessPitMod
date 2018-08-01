@@ -1,1 +1,4 @@
 tile.bottomlesspit.name=Bottomless Pit
+container.bottomlesspit=Bottomless Pit
+tooltip.item=Item
+tooltip.items=Items

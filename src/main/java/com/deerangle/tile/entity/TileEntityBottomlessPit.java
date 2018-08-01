@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 public class TileEntityBottomlessPit extends TileEntity implements ICapabilityProvider {
 
-    public ItemStackHandler inventory = new ItemStackHandler(1);
+    public ItemStackHandler inventory = new ItemStackHandler(9 * 9);
 
     @Override
     public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing) {

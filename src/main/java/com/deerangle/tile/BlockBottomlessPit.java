@@ -34,13 +34,8 @@ public class BlockBottomlessPit extends Block {
     }
 
     @Override
-    public boolean hasTileEntity() {
-        return true;
-    }
-
-    @Override
     public boolean hasTileEntity(IBlockState state) {
-        return hasTileEntity();
+        return true;
     }
 
     @Nullable

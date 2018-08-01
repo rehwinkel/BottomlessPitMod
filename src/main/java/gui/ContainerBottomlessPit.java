@@ -1,6 +1,7 @@
 package gui;
 
 import com.deerangle.tile.entity.TileEntityBottomlessPit;
+import net.minecraft.client.gui.inventory.GuiContainerCreative;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -14,9 +15,19 @@ import net.minecraftforge.items.SlotItemHandler;
 
 public class ContainerBottomlessPit extends Container {
 
+    InventoryPlayer inventoryPlayer;
+    TileEntityBottomlessPit tileEntity;
+
     public ContainerBottomlessPit(InventoryPlayer playerInventory, TileEntityBottomlessPit tileEntity) {
-        IItemHandler inv = tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.UP);
-        addSlotToContainer(new SlotItemHandler(inv, 0, 10, 10));
+        this.inventoryPlayer = playerInventory;
+        this.tileEntity = tileEntity;
+
+        IItemHandler inventory = tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.UP);
+        for(int j = 0; j < inventory.getSlots() / 9; j++){
+            for (int i = 0; i < 9; i++) {
+                addSlotToContainer(new SlotBottomlessPit(inventory, i + j * 9, 8 + (i * 18), 18 + (j * 18)));
+            }
+        }
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
