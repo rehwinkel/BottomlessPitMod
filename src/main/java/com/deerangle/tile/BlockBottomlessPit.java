@@ -2,7 +2,7 @@ package com.deerangle.tile;
 
 import com.deerangle.main.BottomlessMod;
 import com.deerangle.tile.entity.TileEntityBottomlessPit;
-import gui.ModGuiHandler;
+import com.deerangle.gui.ModGuiHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

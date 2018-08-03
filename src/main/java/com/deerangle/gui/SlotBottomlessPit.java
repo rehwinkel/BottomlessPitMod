@@ -1,4 +1,4 @@
-package gui;
+package com.deerangle.gui;
 
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;

@@ -1,4 +1,4 @@
-package gui;
+package com.deerangle.gui;
 
 import com.deerangle.tile.entity.TileEntityBottomlessPit;
 import net.minecraft.entity.player.EntityPlayer;
